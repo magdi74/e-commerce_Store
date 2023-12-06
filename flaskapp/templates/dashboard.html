@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+</head>
+<style>
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+    .image-container img {
+        max-width: 100%; /* Ensure images don't exceed container width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove default inline display */
+        margin: 0 auto; /* Center horizontally */
+    }
+</style>
+<body>
+
+    <h1>Dashboard</h1>
+
+    {% for graph in graphs %}
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/' + graph) }}" alt="Graph">
+        </div>
+    {% endfor %}
+
+</body>
+</html>
