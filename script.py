@@ -38,7 +38,8 @@ table_names = [
     "orderpayments",
     "orders",
     "products",
-    "sellers"
+    "sellers",
+    "reviews"
 ]
 
 # Iterate through table names
