@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import mysql.connector
 import os
 
 app = Flask(__name__)
@@ -11,6 +12,23 @@ def get_graphs():
             graphs.append(file_name)
     return graphs
  
+
+def get_table_data(table_name):
+    # Connect to the database
+    conn = mysql.connector.connect(host='localhost', user='root', password='mypass', database='eco')
+    cursor = conn.cursor()
+
+    # query to select data from the table
+    query = f"SELECT * FROM {table_name}"
+    cursor.execute(query)
+    data = cursor.fetchall()
+
+    # Close the cursor and the connection
+    cursor.close()
+    conn.close()
+    return data
+
+
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -23,6 +41,13 @@ def dashboard():
 @app.route('/data')
 def data():
     return render_template('data.html')
+
+@app.route('/data/<table_name>')
+def tables(table_name):
+    # Get the data from the table name given by the parameter
+    data = get_table_data(table_name)
+    # Render the corresponding HTML file with the data
+    return render_template(f'{table_name}.html', data=data)
     
 if __name__ == '__main__':
     app.run(debug=True)
