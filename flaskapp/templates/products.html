@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+    <h1>Products from MySQL table</h1>
+    <table border="1">
+        <tr>
+            <th>product_id</th>
+            <th>product_category_name</th>
+            <th>product_name_lenght</th>
+            <th>product_description_lenght</th>
+            <th>product_photos_qty</th>
+            <th>product_weight_g</th>
+            <th>product_length_cm</th>
+            <th>product_height_cm</th>
+            <th>product_width_cm</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+            <td>{{ row[8] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

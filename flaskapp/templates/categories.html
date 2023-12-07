@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+</head>
+<body>
+    <h1>Categories from MySQL table</h1>
+    <table border="1">
+        <tr>
+            <th>product_category_name</th>
+            <th>product_category_name_english</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

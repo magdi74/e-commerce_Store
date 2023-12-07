@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>customers</title>
+</head>
+<body>
+    <h1>Customers from MySQL table</h1>
+    <table border="1">
+        <tr>
+            <th>customer_id</th>
+            <th>customer_unique_id</th>
+            <th>customer_zip_code_prefix</th>
+            <th>customer_city</th>
+            <th>customer_state</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

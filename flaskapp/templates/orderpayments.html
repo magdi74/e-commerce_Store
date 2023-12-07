@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Payments</title>
+</head>
+<body>
+    <h1>Order Payments from MySQL table</h1>
+    <table border="1">
+        <tr>
+            <th>order_id</th>
+            <th>payment_sequential</th>
+            <th>payment_type</th>
+            <th>payment_installments</th>
+            <th>payment_value</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

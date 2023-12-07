@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reviews</title>
+</head>
+<body>
+    <h1>Reviews from MySQL table</h1>
+    <table border="1">
+        <tr>
+            <th>review_id</th>
+            <th>order_id</th>
+            <th>review_score</th>
+            <th>review_comment_title</th>
+            <th>review_comment_message</th>
+            <th>review_creation_date</th>
+            <th>review_answer_timestamp</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

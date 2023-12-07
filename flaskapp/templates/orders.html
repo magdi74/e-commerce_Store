@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders</title>
+</head>
+<body>
+    <h1>Orders from MySQL table</h1>
+    <table border="1">
+        <tr>
+            <th>order_id</th>
+            <th>customer_id</th>
+            <th>order_status</th>
+            <th>order_purchase_timestamp</th>
+            <th>order_approved_at</th>
+            <th>order_delivered_carrier_date</th>
+            <th>order_delivered_customer_date</th>
+            <th>order_estimated_delivery_date</th>
+
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

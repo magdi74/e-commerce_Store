@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Items</title>
+</head>
+<body>
+    <h1>Order Items from MySQL table</h1>
+    <table border="1">
+        <tr>
+            <th>order_id</th>
+            <th>order_item_id</th>
+            <th>product_id</th>
+            <th>seller_id</th>
+            <th>shipping_limit_date</th>
+            <th>price</th>
+            <th>freight_value</th>
+            
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
