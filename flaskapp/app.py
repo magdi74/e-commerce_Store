@@ -20,7 +20,8 @@ def get_graphs():
 def get_table_data(table_name):
     # Connect to the database
     conn = mysql.connector.connect(host=os.getenv('DATABASE_HOST'), user=os.getenv('DATABASE_USERNAME'),
-                                    password=os.getenv('DATABASE_PASSWORD'), database=os.getenv('DATABASE_NAME'))
+                                    password=os.getenv('DATABASE_PASSWORD'), database=os.getenv('DATABASE_NAME'),
+                                    port=os.getenv('DATABASE_PORT'))
     cursor = conn.cursor()
 
     # query to select data from the table
