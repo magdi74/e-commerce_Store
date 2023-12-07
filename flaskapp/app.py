@@ -15,7 +15,8 @@ def get_graphs():
 
 def get_table_data(table_name):
     # Connect to the database
-    conn = mysql.connector.connect(host='localhost', user='root', password='mypass', database='eco')
+    conn = mysql.connector.connect(host=os.getenv('DATABASE_HOST'), user=os.getenv('DATABASE_USERNAME'),
+                                    password=os.getenv('DATABASE_PASSWORD'), database=os.getenv('DATABASE_NAME'))
     cursor = conn.cursor()
 
     # query to select data from the table
@@ -46,7 +47,6 @@ def data():
 def tables(table_name):
     # Get the data from the table name given by the parameter
     data = get_table_data(table_name)
-    # Render the corresponding HTML file with the data
     return render_template(f'{table_name}.html', data=data)
     
 if __name__ == '__main__':
