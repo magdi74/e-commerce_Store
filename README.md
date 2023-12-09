@@ -60,11 +60,10 @@ You also need to have a database named eco and a use your user name and password
 
 
 To run the script, follow these steps:
-1.	Clone this repository or download the zip file
-2. Navigate to the project directory: `cd python_script_for_data`
-3. Copy the CSV files from the data folder to the `.\ProgramData\MySQL\MySQL Server 8.0\Data\eco` folder
-4.	Run the script with the command python `script.py`
-5.	Wait for the script to finish and check the output message
+1. Navigate to the project directory: `cd python_script_for_data`
+2. Copy the CSV files from the data folder to the `.\ProgramData\MySQL\MySQL Server 8.0\Data\eco` folder
+3.	Run the script with the command python `script.py`
+4.	Wait for the script to finish and check the output message
 The script will create tables for each CSV file and load the data into them. You can verify the results by connecting to the eco database and querying the tables.
 
 
@@ -96,12 +95,11 @@ To run this notebook, you need to have the following installed on your system:
 
 
 To run the notebook, follow these steps:
-1.	Clone this repository or download the zip file
-2.	Navigate to the project directory `cd jupyter_notebook`
-3.	Launch Jupyter Notebook with the command `jupyter notebook`
-4.	Open the notebook file `Ecommerce Dataset.ipynb`
-5.	Run the cells in order or use the Run All option from the Cell menu
-6.	View the results and plots in the notebook
+1.	Navigate to the project directory `cd jupyter_notebook`
+2.	Launch Jupyter Notebook with the command `jupyter notebook`
+3.	Open the notebook file `Ecommerce Dataset.ipynb`
+4.	Run the cells in order or use the Run All option from the Cell menu
+5.	View the results and plots in the notebook
 
 
 ## Contributing
