@@ -28,6 +28,17 @@ Once the app is running, you can access it from your browser at `http://localhos
 - To view the data page, go to `/data`
 - To view a specific table page, go to `/data/<table_name>`
 
+
+## Flask App with Docker
+This repository contains a Flask web application that has been containerized using Docker for easy deployment and scalability. The Flask app serves on port 5000, and the Docker image can be pulled and run effortlessly. Follow the steps in the README to set up and access the application locally.
+
+
+### Installation
+
+1. Pull the Docker Image `docker pull magdy74/flaskapp`
+2. Run the Docker Container `docker run -p 5000:5000 magdy74/flaskapp`
+3. Open your web browser and go to http://localhost:5000
+
 ## Script File
 A Python script that imports data from CSV files into a MySQL database. The data is related to an e-commerce platform and contains information about geolocation, categories, customers, order items, order payments, orders, products, sellers, and reviews.
 Prerequisites
